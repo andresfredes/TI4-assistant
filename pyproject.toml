@@ -1,10 +1,20 @@
 [project]
 name = "ti4-assistant"
 version = "0.1.0"
-description = "Add your description here"
+description = "A scoreboard and utils app for TI4, supporting PoK and TE expansions"
 readme = "README.md"
 requires-python = ">=3.14"
 dependencies = [
+    "asyncio>=4.0.0",
     "fastapi>=0.121.0",
+    "jinja2>=3.1.6",
     "uvicorn>=0.38.0",
 ]
+
+[tool.ruff]
+line-length = 120
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+line-ending = "auto"

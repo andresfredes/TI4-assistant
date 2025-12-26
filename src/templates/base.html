@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>TI4 Assistant</title>
+    <script src="{{ url_for('static', path='/js/htmx.min.js') }}"></script>
+    <script src="{{ url_for('static', path='/js/htmx-ext-ws.js') }}"></script>
+</head>
+
+<body>
+    <header>
+        <h1>TI4</h1>
+    </header>
+
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+</body>
+
+</html>

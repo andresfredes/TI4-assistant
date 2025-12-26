@@ -6,6 +6,6 @@ from src.core.templates import templates
 router = APIRouter()
 
 
-@router.get("/player", response_class=HTMLResponse)
+@router.get("/", response_class=HTMLResponse)
 async def home(request: Request):
-    return templates.TemplateResponse("player.html", {"request": request})
+    return templates.TemplateResponse("home.html", {"request": request})

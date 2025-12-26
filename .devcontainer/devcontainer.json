@@ -1,22 +1,26 @@
 {
-    "name": "<Your Project Name>",
+    "name": "TI4 Assistant",
     "build": {
         "dockerfile": "Dockerfile"
     },
+    "postCreateCommand": "uv tool install ruff",
     "customizations": {
         "vscode": {
             "extensions": [
+                "astral-sh.uv",
                 "charliermarsh.ruff",
-                "kevinrose.vsc-python-indent",
                 "ms-azuretools.vscode-docker",
                 "ms-python.python",
-                "ms-python.vscode-pylance",
-                "njpwerner.autodocstring",
-                "redhat.vscode-yaml",
-                "shardulm94.trailing-spaces",
-                "tamasfe.even-better-toml",
-                "yzhang.markdown-all-in-one"
-            ]
+                "ms-python.vscode-pylance"
+            ],
+            "settings": {
+                "editor.formatOnSave": true,
+                "python.formatting.provider": "none",
+                "editor.codeActionsOnSave": {
+                    "source.organizeImports": "explicit",
+                    "source.fixAll.ruff": "explicit"
+                }
+            }
         }
     }
 }
