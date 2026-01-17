@@ -1,0 +1,14 @@
+<table>
+    <thead>
+        <tr>
+            <th>Icon</th>
+            <th>Faction</th>
+            <th>Expansion</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for faction in factions %}
+        {% include 'fragments/faction-detail.html' %}
+        {% endfor %}
+    </tbody>
+</table>
